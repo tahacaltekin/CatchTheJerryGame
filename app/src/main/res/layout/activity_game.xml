@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context=".GameActivity">
+
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/redhatdisplay_bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time: 0"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:gravity="center"
+        android:fontFamily="@font/redhatdisplay_bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/scoreText"
+        app:layout_constraintEnd_toStartOf="@+id/highScoreText"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/highScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="H.Score: 0"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/redhatdisplay_bold"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bangers_regular"
+        android:text="CATCH THE JERRY"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeText" />
+
+    <GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <ImageView
+            android:id="@+id/hole1"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            app:srcCompat="@drawable/hole" />
+
+        <ImageView
+            android:id="@+id/hole2"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            app:srcCompat="@drawable/hole" />
+
+        <ImageView
+            android:id="@+id/hole3"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            app:srcCompat="@drawable/hole" />
+
+        <ImageView
+            android:id="@+id/hole4"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            app:srcCompat="@drawable/hole" />
+
+        <ImageView
+            android:id="@+id/hole5"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            app:srcCompat="@drawable/hole" />
+
+        <ImageView
+            android:id="@+id/hole6"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            app:srcCompat="@drawable/hole" />
+
+        <ImageView
+            android:id="@+id/hole7"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            app:srcCompat="@drawable/hole" />
+
+        <ImageView
+            android:id="@+id/hole8"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            app:srcCompat="@drawable/hole" />
+
+        <ImageView
+            android:id="@+id/hole9"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            app:srcCompat="@drawable/hole" />
+
+        <ImageView
+            android:id="@+id/hole10"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:layout_row="3"
+            android:layout_column="0"
+            app:srcCompat="@drawable/hole" />
+
+        <ImageView
+            android:id="@+id/hole11"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            app:srcCompat="@drawable/hole" />
+
+        <ImageView
+            android:id="@+id/hole12"
+            android:layout_width="136dp"
+            android:layout_height="136dp"
+            android:layout_row="3"
+            android:layout_column="2"
+            app:srcCompat="@drawable/hole" />
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <ImageView
+            android:id="@+id/mouse1"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/jerry" />
+
+        <ImageView
+            android:id="@+id/mouse2"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/jerry" />
+
+        <ImageView
+            android:id="@+id/mouse3"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/jerry" />
+
+        <ImageView
+            android:id="@+id/mouse4"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/jerry" />
+
+        <ImageView
+            android:id="@+id/mouse5"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/jerry" />
+
+        <ImageView
+            android:id="@+id/mouse6"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/jerry" />
+
+        <ImageView
+            android:id="@+id/mouse7"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/jerry" />
+
+        <ImageView
+            android:id="@+id/mouse8"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/jerry" />
+
+        <ImageView
+            android:id="@+id/mouse9"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/jerry" />
+
+        <ImageView
+            android:id="@+id/mouse10"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/jerry" />
+
+        <ImageView
+            android:id="@+id/mouse11"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/jerry" />
+
+        <ImageView
+            android:id="@+id/mouse12"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/jerry" />
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
